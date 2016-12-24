@@ -626,6 +626,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\References\confCons.xml">
+      <Link>confCons.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Help\CMDSwitches.htm">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
