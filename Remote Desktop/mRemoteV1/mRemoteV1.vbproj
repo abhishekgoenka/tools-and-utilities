@@ -95,51 +95,41 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ADTree, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\ADTree.dll</HintPath>
+    <Reference Include="ADTree">
+      <HintPath>..\References\ADTree.dll</HintPath>
     </Reference>
-    <Reference Include="DiffieHellman, Version=0.0.0.0, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\DiffieHellman.dll</HintPath>
+    <Reference Include="AxInterop.WFICALib">
+      <HintPath>..\References\AxInterop.WFICALib.dll</HintPath>
     </Reference>
-    <Reference Include="FilteredPropertyGrid, Version=1.0.2258.31541, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\FilteredPropertyGrid.dll</HintPath>
+    <Reference Include="DiffieHellman">
+      <HintPath>..\References\DiffieHellman.dll</HintPath>
     </Reference>
-    <Reference Include="IPTextBox, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\IPTextBox.dll</HintPath>
+    <Reference Include="FilteredPropertyGrid">
+      <HintPath>..\References\FilteredPropertyGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WFICALib">
+      <HintPath>..\References\Interop.WFICALib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="IPTextBox">
+      <HintPath>..\References\IPTextBox.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>References\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, PublicKeyToken=3a6eb82f876a49bc">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\MagicLibrary.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="MagicLibrary">
+      <HintPath>..\References\MagicLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="MiniGeckoBrowser, Version=1.0.3142.33318, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\MiniGeckoBrowser.dll</HintPath>
+    <Reference Include="MiniGeckoBrowser">
+      <HintPath>..\References\MiniGeckoBrowser.dll</HintPath>
     </Reference>
-    <Reference Include="MiniTabControl, Version=1.0.3142.32770, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\MiniTabControl.dll</HintPath>
+    <Reference Include="MiniTabControl">
+      <HintPath>..\References\MiniTabControl.dll</HintPath>
     </Reference>
-    <Reference Include="Org.Mentalis.Security, Version=1.0.13.715, Culture=neutral">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\Org.Mentalis.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="PSTaskDialog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\PSTaskDialog.dll</HintPath>
-    </Reference>
-    <Reference Include="Skybound.Gecko, Version=1.8.1.4, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\Skybound.Gecko.dll</HintPath>
+    <Reference Include="PSTaskDialog">
+      <HintPath>..\References\PSTaskDialog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -150,17 +140,14 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="Tamir.SharpSSH, Version=1.1.1.13, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\Tamir.SharpSSH.dll</HintPath>
+    <Reference Include="Tamir.SharpSSH">
+      <HintPath>..\References\Tamir.SharpSSH.dll</HintPath>
     </Reference>
-    <Reference Include="VncSharpNG, Version=1.1.2.0, Culture=neutral, PublicKeyToken=61974755c7bfea7c, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\VncSharpNG.dll</HintPath>
+    <Reference Include="VncSharpNG">
+      <HintPath>..\References\VncSharpNG.dll</HintPath>
     </Reference>
-    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.2.2864.18696, Culture=neutral, PublicKeyToken=d481317c817cec47, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>References\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    <Reference Include="WeifenLuo.WinFormsUI.Docking">
+      <HintPath>..\References\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -1125,22 +1112,6 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
-    <COMReference Include="AxWFICALib">
-      <Guid>{238F6F80-B8B4-11CF-8771-00A024541EE3}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="EOLWTSCOM">
-      <Guid>{96C3FA7A-3211-4D93-BFEA-4589DA4ABDE2}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
     <COMReference Include="MSTSCLib">
       <Guid>{8C11EFA1-92C3-11D1-BC1E-00C04FA31489}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -1163,14 +1134,6 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WFICALib">
-      <Guid>{238F6F80-B8B4-11CF-8771-00A024541EE3}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
   </ItemGroup>
