@@ -12,16 +12,21 @@ namespace SysinternalsToolsDownloader.ViewModel
     /// <summary>
     ///     A ViewModel class that is bind with MainWindow
     /// </summary>
-    public class Downloader : INotifyPropertyChanged
+    public class DownloaderViewModel : INotifyPropertyChanged
     {
-        private const string DOWNLOAD_URL = "https://download.sysinternals.com/files/SysinternalsSuite.zip";
-        private readonly string TEMP_FILE_PATH = Path.GetTempPath() + "SysinternalsSuite.zip";
+        private readonly ISysinternalsSuiteDownload _sysinternalsSuiteDownload;
+
+
         private string _diagMessage;
         private bool _isDownloadButtonEnabled;
         private int _lastProgressPercentage;
 
-        public Downloader()
+        public DownloaderViewModel(ISysinternalsSuiteDownload sysinternalsSuiteDownload)
         {
+            _sysinternalsSuiteDownload = sysinternalsSuiteDownload;
+            _sysinternalsSuiteDownload.DownloadProgressChanged = wc_DownloadProgressChanged;
+            _sysinternalsSuiteDownload.DownloadFileCompleted = Wc_DownloadFileCompleted;
+
             IsExtractToCurrentDirectorySelected = true;
             IsDownloadButtonEnabled = true;
         }
@@ -79,24 +84,18 @@ namespace SysinternalsToolsDownloader.ViewModel
             Log("Downloading started...");
             IsDownloadButtonEnabled = false;
 
-            using (var wc = new WebClient())
-            {
-                wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                wc.DownloadFileCompleted += Wc_DownloadFileCompleted;
-                wc.DownloadFileAsync(new Uri(DOWNLOAD_URL),
-                    TEMP_FILE_PATH);
-            }
+            _sysinternalsSuiteDownload.DownloadFileAsync();
         }
 
         private void Wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            Log($"File downloaded successfully at {TEMP_FILE_PATH}");
+            Log($"File downloaded successfully at {_sysinternalsSuiteDownload.GetDownloadedFilePath()}");
             IsDownloadButtonEnabled = true;
 
             if (IsExtractToCurrentDirectorySelected)
-                Decompress(TEMP_FILE_PATH, Directory.GetCurrentDirectory());
+                Decompress(_sysinternalsSuiteDownload.GetDownloadedFilePath(), Directory.GetCurrentDirectory());
             else if (IsExtractToProgramFilesSelected)
-                Decompress(TEMP_FILE_PATH, Directory.GetCurrentDirectory());
+                Decompress(_sysinternalsSuiteDownload.GetDownloadedFilePath(), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles));
         }
 
         private void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using SysinternalsToolsDownloader.ViewModel;
 
 namespace SysinternalsToolsDownloader
 {

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Height="535" Width="525" Title="Sysinternals Tools Downloader" ResizeMode="NoResize" 
-        WindowStartupLocation="CenterScreen" Icon="images/icon.ico" DataContext="{StaticResource datasource}">
+        WindowStartupLocation="CenterScreen" Icon="images/icon2.ico" DataContext="{Binding Path=Main, Source={StaticResource datasource}}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="200"></RowDefinition>

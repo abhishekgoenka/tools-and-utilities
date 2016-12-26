@@ -4,6 +4,6 @@
              xmlns:viewModel="clr-namespace:SysinternalsToolsDownloader.ViewModel"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <viewModel:Downloader x:Key="datasource" />
+        <viewModel:ViewModelLocator x:Key="datasource" />
     </Application.Resources>
 </Application>
