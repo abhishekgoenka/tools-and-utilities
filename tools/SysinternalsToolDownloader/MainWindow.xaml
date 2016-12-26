@@ -37,9 +37,7 @@
                 <ColumnDefinition Width="410"></ColumnDefinition>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ProgressBar Value="50" Minimum="0" Maximum="100" Grid.Column="0" 
-                         Width="350" Height="30" HorizontalAlignment="Left" Margin="10,0,0,0"></ProgressBar>
-            <Button Height="30" Width="100" Grid.Column="1" Margin="-10,0,0,0" Command="{Binding StartDownloadCommand}" >Start Download
+            <Button Height="30" Width="100" Grid.Column="1" Margin="-10,0,0,0" Command="{Binding StartDownloadCommand}" IsEnabled="{Binding IsDownloadButtonEnabled}" >Start Download
                 </Button>
 
         </Grid>
