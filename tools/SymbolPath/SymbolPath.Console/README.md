@@ -3,7 +3,7 @@ The debugger uses either the symbol search path that is specified by the user—
 
 SymbolPath utility sets symbol search path in _NT_SYMBOL_PATH environment variable. [Download](https://github.com/abhishekgoenka/tools-and-utilities/blob/master/tools/binaries/SymbolPath.exe) 
 
-![GitHub Logo](images/ApplicationScreenshot.png)
+![GitHub Logo](../ApplicationScreenshot.png)
 
 # License
 All tools are licensed under the [GPL(v3)](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
