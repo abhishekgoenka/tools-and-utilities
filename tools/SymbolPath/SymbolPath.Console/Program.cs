@@ -1,24 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SymbolPath.Console.Utilities;
 
 namespace SymbolPath.Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Show header message to Console
             PrintHeaderMessage();
 
-            SymPath symPath = new SymPath(new EnvironmentVariable(), new Logger());
-            symPath.SetSymPath();
-
+            try
+            {
+                var symPath = new SymPath(new EnvironmentVariable(), new Logger());
+                symPath.SetSymPath();
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e);
+            }
         }
 
-        static void PrintHeaderMessage()
+        private static void PrintHeaderMessage()
         {
             System.Console.WriteLine("SymbolePath v1.1 - Diagnosis utility");
             System.Console.WriteLine("Copyright (C) 2015-2016 Abhishek Goenka");
