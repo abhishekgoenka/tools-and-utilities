@@ -1,2 +1,4 @@
 language: csharp
 solution: ./tools/SysinternalsToolDownloader/SysinternalsToolDownloader.sln
+install:
+  - nuget restore ./tools/SysinternalsToolDownloader/SysinternalsToolDownloader.sln
